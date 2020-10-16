@@ -72,13 +72,23 @@ function Layout({
       <div
         {...props}
         css={`
-          width: ${layoutName === 'small' ? 'auto' : `${layoutWidth}px`};
+          width: auto;
           min-width: ${mergedBreakpoints.min}px;
+          max-width: ${mergedBreakpoints.max}px;
           margin: 0 auto;
           padding-bottom: ${cssPx(paddingBottom)};
         `}
       >
-        {children}
+        <div
+          css={`
+            margin: 0
+              ${layoutName === 'small' || layoutName === 'medium'
+                ? 0
+                : `${8 * GU}px`};
+          `}
+        >
+          {children}
+        </div>
       </div>
     </LayoutContext.Provider>
   )

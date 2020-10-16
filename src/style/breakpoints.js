@@ -7,6 +7,7 @@ const BREAKPOINTS = {
   small: 360,
   medium: 96 * GU,
   large: 144 * GU,
+  max: 144 * GU,
 }
 
 // CSS breakpoints

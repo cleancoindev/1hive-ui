@@ -32,7 +32,7 @@ function Split({ primary, secondary, invert }) {
         css={`
           flex-shrink: 0;
           flex-grow: 0;
-          width: ${oneColumn ? '100%' : `${33 * GU}px`};
+          width: ${oneColumn ? '100%' : `${40 * GU}px`};
           margin-left: ${!oneColumn && !inverted ? 2 * GU : 0}px;
           padding-top: ${oneColumn && !inverted ? 2 * GU : 0}px;
         `}
